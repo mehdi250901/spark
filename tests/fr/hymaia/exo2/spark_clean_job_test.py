@@ -27,6 +27,7 @@ class SparkScriptTest(unittest.TestCase):
         # Then
         expected_data = [Row(name="John", age=25), Row(name="Doe", age=30)]
         expected_df = spark.createDataFrame(expected_data)
+        assert expected_df.columns == df.columns
         self.assertEqual(actual_df.collect(), expected_df.collect())
     
     def test_Joindre(self):
@@ -42,6 +43,7 @@ class SparkScriptTest(unittest.TestCase):
         # Then
         expected_data = [Row(name="Cussac", age=27, zip=75020, city="Paris"), Row(name="Jane", age=17, zip=75019, city="Paris"), Row(name="Doe", age=30, zip=75018, city="Paris")]
         expected_df = spark.createDataFrame(expected_data)
+        
         self.assertEqual(actual_df.collect(), expected_df.collect())
 
     def test_departement_col_add(self):
@@ -56,6 +58,7 @@ class SparkScriptTest(unittest.TestCase):
         # Then
         expected_data = [Row(name="Cussac", age=27, zip=75020, city="Paris",departement='75'), Row(name="Jane", age=17, zip=20190, city="Corse",departement='2A'), Row(name="Doe", age=30, zip=20200, city="Corse",departement='2B')]
         expected_df = spark.createDataFrame(expected_data)
+        
         self.assertEqual(actual_df.collect(), expected_df.collect())
 
     def test_grouper(self):
