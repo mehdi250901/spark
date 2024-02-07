@@ -1,11 +1,7 @@
 import unittest 
 from pyspark.sql import SparkSession
 from pyspark.sql import Row
-#from src.fr.hymaia.exo2.agregate.agregate import filtrer, Joindre, departement_col_add 
-#from src.fr.hymaia.exo2.clean.clean import calculate_population_by_departement
-#from src.fr.hymaia.exo2.spark_clean_job import filtrer, Joindre, departement_col_add,calculate_population_by_departement
-#from tests.fr.hymaia.exo2.SparkSession import spark
-#from tests.fr.hymaia.spark_test_case import spark
+
 
 
 from pyspark.sql import functions as f
