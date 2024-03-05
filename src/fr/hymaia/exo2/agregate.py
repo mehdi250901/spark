@@ -4,7 +4,6 @@ from pyspark.sql import SparkSession
 def main():
     spark = SparkSession.builder \
     .appName("mehdi") \
-    .master("local[*]") \
     .getOrCreate()
  
     df_clean = spark.read.option("header", "true").parquet("/home/mehdi/spark-handson/data/exo2/output")

@@ -4,7 +4,6 @@ from pyspark.sql import SparkSession
 def main():
     spark = SparkSession.builder \
     .appName("mehdi") \
-    .master("local[*]") \
     .getOrCreate()
 
     city_zipcode = spark.read.csv("/home/mehdi/spark-handson/src/resources/exo2/city_zipcode.csv",  header=True, inferSchema=True) 
