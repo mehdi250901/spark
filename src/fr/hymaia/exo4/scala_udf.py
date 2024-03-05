@@ -23,7 +23,7 @@ def main():
     df = csv_df.withColumn('category_name', addCategoryName(csv_df['category']))
     df.write.csv("resultat_scala_udf.csv", header=True, mode="overwrite")
     timeB = time.time()
-    print("le temps d'éxecution est: ",(timeB - timeA))
+    #print("le temps d'éxecution est: ",(timeB - timeA))
 
     spark.stop()
 

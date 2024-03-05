@@ -1,5 +1,5 @@
 resource "aws_s3_bucket" "bucket" {
-  bucket = "mehdi-buquet"
+  bucket = "bucket-mehdi-salim-bania"
 
-  tags = local.tags
+  tags = local.tags
 }
